@@ -10,7 +10,11 @@
     "react-scripts": "0.7.0"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "csv-parser": "^2.1.0",
+    "express": "^4.16.4",
     "foreman": "^2.0.0",
+    "mongoose": "^5.4.14",
     "prop-types": "^15.5.8",
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
