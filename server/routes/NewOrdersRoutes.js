@@ -1,12 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const {list,show,create,update,remove} =require("../controllers/NewOrdersController");
+const data = require("../data.json");
 
-
-router.get("/newOrders", list);
-router.get("/newOrders/:id", show);
-router.post("/newOrders", create);
-router.put("/newOrders/:id", update);
-router.delete("/newOrders/:id", remove);
+router.get("/newOrders", (req, res) => {
+   return res.json(data[0].new_orders);
+});
 
 module.exports =  router;

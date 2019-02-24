@@ -1,12 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const {list,show,create,update,remove} =require("../controllers/TicketsController");
+const data = require("../data.json");
 
-
-router.get("/tickets", list);
-router.get("/tickets/:id", show);
-router.post("/tickets", create);
-router.put("/tickets/:id", update);
-router.delete("/tickets/:id", remove);
+router.get("/tickets", (req, res)=> {
+    return res.json(data[0].tickets);
+});
 
 module.exports =  router;

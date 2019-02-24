@@ -1,12 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const {list,show,create,update,remove} =require("../controllers/NewCommentsController");
+const data = require("../data.json");
 
-
-router.get("/newComments", list);
-router.get("/newComments/:id", show);
-router.post("/newComments", create);
-router.put("/newComments/:id", update);
-router.delete("/newComments/:id", remove);
+router.get("/newComments", (req, res)=> {
+    return res.json(data[0].new_comments);
+});
 
 module.exports =  router;

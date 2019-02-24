@@ -1,12 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const {list,show,create,update,remove} =require("../controllers/NewTasksController");
+const data = require("../data.json");
 
 
-router.get("/newTasks", list);
-router.get("/newTasks/:id", show);
-router.post("/newTasks", create);
-router.put("/newTasks/:id", update);
-router.delete("/newTasks/:id", remove);
+router.get("/newTasks", (req, res)=> {
+    return res.json(data[0].new_tasks);
+});
 
 module.exports =  router;

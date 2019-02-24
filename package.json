@@ -15,6 +15,7 @@
     "express": "^4.16.4",
     "foreman": "^2.0.0",
     "mongoose": "^5.4.14",
+    "node-fetch": "^2.3.0",
     "prop-types": "^15.5.8",
     "react": "^15.3.2",
     "react-dom": "^15.3.2"
